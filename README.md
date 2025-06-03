@@ -18,7 +18,7 @@
     --error-color: #ff4444; 
     --success-color: #00C851; 
     --info-color: #33b5e5;
-    --warning-color: #ffbb33;
+    --warning-color: #594214;
     --border-radius: 8px;
     --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -782,7 +782,7 @@ body {
     visibility: hidden;
     width: 200px;
     background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     border-radius: var(--border-radius);
     padding: 8px;
@@ -815,7 +815,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
+    background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -827,38 +827,40 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     background: var(--primary-color);
 }
 
-body > h1:first-of-type:not(.heading) { 
-    display: none !important; 
-}
-
-.markdown-body h1:first-child { 
-    display: none !important; 
-}
-
-.position-relative h1:first-child { 
-    display: none !important; 
-}
-
-/* Fix for the white underline in titles */
-.page-title, 
-.form-title {
+/* Remove ALL possible underline sources from titles */
+.page-title,
+.form-title,
+.page-title:hover,
+.form-title:hover,
+.page-title:focus,
+.form-title:focus,
+.page-title:active,
+.form-title:active {
     text-decoration: none !important;
     background-image: none !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    outline: none !important;
 }
 
-/* Completely disable the link icon behavior */
-.page-title {
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-/* For Chrome's specific heading link behavior */
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
-    content: none !important;
+/* Nuclear option to remove any browser-added decorations */
+.page-title::after,
+.page-title::before,
+.form-title::after,
+.form-title::before {
+    content: "" !important;
     display: none !important;
+    background: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    border: none !important;
+}
+
+/* Disable Chrome's heading link feature completely */
+h1, h2, h3, h4, h5, h6 {
+    -webkit-user-modify: read-only;
+    user-modify: read-only;
+    pointer-events: none;
 }
 
     </style>
