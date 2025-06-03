@@ -839,6 +839,23 @@ body > h1:first-of-type:not(.heading) {
     display: none !important; 
 }
 
+/* Fix for the white underline in titles */
+.page-title, .form-title {
+    text-decoration: none !important;
+}
+
+/* Disable the link icon on headings */
+.page-title {
+    -webkit-user-modify: read-only;
+    user-modify: read-only;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Additional fix for Firefox */
+.page-title::before, .form-title::before {
+    display: none !important;
+}
     </style>
 </head>
 <body>
