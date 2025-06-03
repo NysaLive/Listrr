@@ -844,8 +844,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /* Nuclear option to remove any browser-added decorations */
-.page-title::after,
-.page-title::before,
 .form-title::after,
 .form-title::before {
     content: "" !important;
