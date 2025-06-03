@@ -92,7 +92,7 @@ body {
 }
 
 .main-container {
-    margin-top: 80px;
+    margin-top: 40px;
     padding: 20px;
     max-width: 1200px;
     margin-left: auto;
