@@ -840,22 +840,36 @@ body > h1:first-of-type:not(.heading) {
 }
 
 /* Fix for the white underline in titles */
-.page-title, .form-title {
+.page-title, 
+.form-title {
     text-decoration: none !important;
+    background-image: none !important;
 }
 
-/* Disable the link icon on headings */
+/* Completely disable the link icon behavior */
 .page-title {
-    -webkit-user-modify: read-only;
-    user-modify: read-only;
-    -webkit-user-select: none;
+    pointer-events: none;
     user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
-/* Additional fix for Firefox */
-.page-title::before, .form-title::before {
+/* For Chrome's specific heading link behavior */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    content: none !important;
     display: none !important;
 }
+
+/* Remove any potential pseudo-elements causing underlines */
+.page-title::after, 
+.form-title::after,
+.page-title::before, 
+.form-title::before {
+    content: none !important;
+    background-image: none !important;
+}
+
     </style>
 </head>
 <body>
