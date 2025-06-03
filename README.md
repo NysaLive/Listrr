@@ -863,6 +863,18 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 
+body > h1:first-of-type:not(.heading) { 
+    display: none !important; 
+}
+
+.markdown-body h1:first-child { 
+    display: none !important; 
+}
+
+.position-relative h1:first-child { 
+    display: none !important; 
+}
+
     </style>
 </head>
 <body>
