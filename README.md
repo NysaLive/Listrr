@@ -861,15 +861,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     display: none !important;
 }
 
-/* Remove any potential pseudo-elements causing underlines */
-.page-title::after, 
-.form-title::after,
-.page-title::before, 
-.form-title::before {
-    content: none !important;
-    background-image: none !important;
-}
-
     </style>
 </head>
 <body>
