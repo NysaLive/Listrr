@@ -1667,6 +1667,16 @@ function createBasicInfoSection(type) {
                     ${listingData.transportCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
                 </select>
             </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label required">Contact Number</label>
+                    <input type="tel" class="form-control" name="contactNumber" placeholder="10-digit mobile number" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Alternate Number</label>
+                    <input type="tel" class="form-control" name="alternateNumber" placeholder="Alternate contact number">
+                </div>
+            </div>
         `;
     }
     
