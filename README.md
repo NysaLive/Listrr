@@ -959,9 +959,11 @@ const listingData = {
     ],
     
     cities: [
-        "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", 
-        "Kolkata", "Pune", "Ahmedabad", "Jaipur", "Lucknow"
-    ],
+    "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", 
+    "Kolkata", "Pune", "Ahmedabad", "Jaipur", "Lucknow",
+    "Surat", "Indore", "Bhopal", "Chandigarh", "Patna",
+    "Nagpur", "Coimbatore", "Vadodara", "Guwahati", "Rajkot"
+],
     
     serviceCategories: [
         "Electrician", "Plumber", "Carpenter", "Painter", "Pest Control",
