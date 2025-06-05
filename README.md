@@ -912,88 +912,92 @@ body > h1:first-of-type:not(.heading) {
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-        // Data for listing types and forms
-        const listingData = {
-            types: [
-                {
-                    id: 'serviceProvider',
-                    title: 'Service Provider',
-                    icon: 'fa-tools',
-                    description: 'List electricians, plumbers, cleaners, and other service professionals with detailed service offerings and availability'
-                },
-                {
-                    id: 'store',
-                    title: 'Store',
-                    icon: 'fa-store',
-                    description: 'List retail stores, supermarkets, and other businesses with product offerings and store details'
-                },
-                {
-                    id: 'publicPlace',
-                    title: 'Public Place',
-                    icon: 'fa-landmark',
-                    description: 'List parks, malls, hospitals, and other public locations with visitor information and facilities'
-                },
-                {
-                    id: 'realEstate',
-                    title: 'Real Estate',
-                    icon: 'fa-home',
-                    description: 'List properties for sale or rent with detailed specifications and contact information'
-                },
-                {
-                    id: 'job',
-                    title: 'Job',
-                    icon: 'fa-briefcase',
-                    description: 'List job opportunities and vacancies with requirements and application details'
-                },
-                {
-                    id: 'distributor',
-                    title: 'Distributor',
-                    icon: 'fa-truck',
-                    description: 'List distributors with their product ranges and distribution areas'
-                },
-                {
-                    id: 'voiceSeller',
-                    title: 'Voice Seller',
-                    icon: 'fa-microphone',
-                    description: 'List voice over artists and sellers with their specialties and demo samples'
-                }
-            ],
-            
-            cities: [
-                "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", 
-                "Kolkata", "Pune", "Ahmedabad", "Jaipur", "Lucknow"
-            ],
-            
-            serviceCategories: [
-                "Electrician", "Plumber", "Carpenter", "Painter", "Pest Control",
-                "House Cleaning", "AC Repair", "Appliance Repair", "Plumbing Services",
-                "Carpentry", "Masonry", "Roofing", "Welding", "Tiling", "Fabrication",
-                "Gardening", "Commercial Cleaning", "Moving Services", "Laundry Services",
-                "Catering", "Event Planning", "Photography", "Videography", "Makeup Artist",
-                "Hair Stylist", "Tailoring", "Driving Instructor", "Tutoring", "Fitness Trainer",
-                "Yoga Instructor", "Massage Therapist", "Beauty Services", "Pet Care",
-                "Computer Repair", "Mobile Repair", "Network Services", "Security Services",
-                "CCTV Installation", "Interior Design", "Architecture", "Legal Services",
-                "Accounting", "Tax Services", "Business Consulting", "Other Service"
-            ],
-            
-            storeCategories: [
-                "Grocery Store", "Electronics", "Clothing", "Pharmacy", "Furniture",
-                "Jewelry", "Footwear", "Books & Stationery", "Sports Goods", "Toys & Games",
-                "Beauty Products", "Hardware", "Automobile Parts", "Pet Supplies", "Gift Shop",
-                "Liquor Store", "Organic Products", "Handicrafts", "Flower Shop", "Bakery",
-                "Butcher Shop", "Fish Market", "Vegetable Market", "Fruit Market", "Dairy Products",
-                "Sweet Shop", "Tea & Coffee", "Spices", "Mobile Store", "Computer Store",
-                "Bicycle Shop", "Fabric Store", "Other"
-            ],
-            
-            jobCategories: [
-                "IT/Software", "Sales", "Marketing", "Finance", "Human Resources",
-                "Operations", "Customer Service", "Driver", "Delivery", "House Help",
-                "Security", "Teacher", "Healthcare", "Hospitality", "Construction",
-                "Manufacturing", "Other"
-            ]
-        };
+const listingData = {
+    types: [
+        {
+            id: 'serviceProvider',
+            title: 'Service Provider',
+            icon: 'fa-tools',
+            description: 'List electricians, plumbers, cleaners, and other service professionals with detailed service offerings and availability'
+        },
+        {
+            id: 'store',
+            title: 'Store',
+            icon: 'fa-store',
+            description: 'List retail stores, supermarkets, and other businesses with product offerings and store details'
+        },
+        {
+            id: 'publicPlace',
+            title: 'Public Place',
+            icon: 'fa-landmark',
+            description: 'List parks, malls, hospitals, and other public locations with visitor information and facilities'
+        },
+        {
+            id: 'realEstate',
+            title: 'Real Estate',
+            icon: 'fa-home',
+            description: 'List properties for sale or rent with detailed specifications and contact information'
+        },
+        {
+            id: 'job',
+            title: 'Job',
+            icon: 'fa-briefcase',
+            description: 'List job opportunities and vacancies with requirements and application details'
+        },
+        {
+            id: 'distributor',
+            title: 'Distributor',
+            icon: 'fa-truck',
+            description: 'List distributors with their product ranges and distribution areas'
+        },
+        {
+            id: 'transport',
+            title: 'Transport',
+            icon: 'fa-truck-moving',
+            description: 'List transport services including e-rickshaws, trucks, and rental vehicles with service details'
+        }
+    ],
+    
+    cities: [
+        "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", 
+        "Kolkata", "Pune", "Ahmedabad", "Jaipur", "Lucknow"
+    ],
+    
+    serviceCategories: [
+        "Electrician", "Plumber", "Carpenter", "Painter", "Pest Control",
+        "House Cleaning", "AC Repair", "Appliance Repair", "Plumbing Services",
+        "Carpentry", "Masonry", "Roofing", "Welding", "Tiling", "Fabrication",
+        "Gardening", "Commercial Cleaning", "Moving Services", "Laundry Services",
+        "Catering", "Event Planning", "Photography", "Videography", "Makeup Artist",
+        "Hair Stylist", "Tailoring", "Driving Instructor", "Tutoring", "Fitness Trainer",
+        "Yoga Instructor", "Massage Therapist", "Beauty Services", "Pet Care",
+        "Computer Repair", "Mobile Repair", "Network Services", "Security Services",
+        "CCTV Installation", "Interior Design", "Architecture", "Legal Services",
+        "Accounting", "Tax Services", "Business Consulting", "Other Service"
+    ],
+    
+    storeCategories: [
+        "Grocery Store", "Electronics", "Clothing", "Pharmacy", "Furniture",
+        "Jewelry", "Footwear", "Books & Stationery", "Sports Goods", "Toys & Games",
+        "Beauty Products", "Hardware", "Automobile Parts", "Pet Supplies", "Gift Shop",
+        "Liquor Store", "Organic Products", "Handicrafts", "Flower Shop", "Bakery",
+        "Butcher Shop", "Fish Market", "Vegetable Market", "Fruit Market", "Dairy Products",
+        "Sweet Shop", "Tea & Coffee", "Spices", "Mobile Store", "Computer Store",
+        "Bicycle Shop", "Fabric Store", "Other"
+    ],
+    
+    jobCategories: [
+        "IT/Software", "Sales", "Marketing", "Finance", "Human Resources",
+        "Operations", "Customer Service", "Driver", "Delivery", "House Help",
+        "Security", "Teacher", "Healthcare", "Hospitality", "Construction",
+        "Manufacturing", "Other"
+    ],
+    
+    transportCategories: [
+        "E-Rickshaw", "Auto Rickshaw", "Three Wheeler Delivery", 
+        "Mini Truck & Tempo", "Large Truck", "Rental Vehicle"
+    ]
+};
 
         // Initialize the application
         document.addEventListener('DOMContentLoaded', function() {
@@ -1027,31 +1031,31 @@ body > h1:first-of-type:not(.heading) {
             });
         }
 
-        // Generate all forms
-        function generateForms() {
-            const container = document.getElementById('formsContainer');
-            
-            // Service Provider Form
-            container.appendChild(createServiceProviderForm());
-            
-            // Store Form
-            container.appendChild(createStoreForm());
-            
-            // Public Place Form
-            container.appendChild(createPublicPlaceForm());
-            
-            // Real Estate Form
-            container.appendChild(createRealEstateForm());
-            
-            // Job Form
-            container.appendChild(createJobForm());
-            
-            // Distributor Form
-            container.appendChild(createDistributorForm());
-            
-            // Voice Seller Form
-            container.appendChild(createVoiceSellerForm());
-        }
+// Generate all forms
+function generateForms() {
+    const container = document.getElementById('formsContainer');
+    
+    // Service Provider Form
+    container.appendChild(createServiceProviderForm());
+    
+    // Store Form
+    container.appendChild(createStoreForm());
+    
+    // Public Place Form
+    container.appendChild(createPublicPlaceForm());
+    
+    // Real Estate Form
+    container.appendChild(createRealEstateForm());
+    
+    // Job Form
+    container.appendChild(createJobForm());
+    
+    // Distributor Form
+    container.appendChild(createDistributorForm());
+    
+    // Transport Form
+    container.appendChild(createTransportForm());
+}
 
         // Create Service Provider Form
         function createServiceProviderForm() {
@@ -1539,138 +1543,148 @@ body > h1:first-of-type:not(.heading) {
         return form;
     }
 
-    // Create Voice Seller Form
-    function createVoiceSellerForm() {
-        const form = document.createElement('div');
-        form.id = 'voiceSellerForm';
-        form.className = 'form-container';
+// Create Transport Form
+function createTransportForm() {
+    const form = document.createElement('div');
+    form.id = 'transportForm';
+    form.className = 'form-container';
+    
+    form.innerHTML = `
+        <div class="form-header">
+            <h2 class="form-title"><i class="fas fa-truck-moving"></i> Transport Listing</h2>
+            <button class="close-form" onclick="hideForms()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
         
-        form.innerHTML = `
-            <div class="form-header">
-                <h2 class="form-title"><i class="fas fa-microphone"></i> Voice Seller Listing</h2>
-                <button class="close-form" onclick="hideForms()">
-                    <i class="fas fa-times"></i>
-                </button>
+        <div class="form-steps">
+            <div class="form-step active" data-step="1">
+                <div class="form-step-number">1</div>
+                <div class="form-step-label">Basic Info</div>
             </div>
-            
-            <div class="form-steps">
-                <div class="form-step active" data-step="1">
-                    <div class="form-step-number">1</div>
-                    <div class="form-step-label">Basic Info</div>
-                </div>
-                <div class="form-step" data-step="2">
-                    <div class="form-step-number">2</div>
-                    <div class="form-step-label">Voice Details</div>
-                </div>
-                <div class="form-step" data-step="3">
-                    <div class="form-step-number">3</div>
-                    <div class="form-step-label">Samples</div>
-                </div>
-                <div class="form-step" data-step="4">
-                    <div class="form-step-number">4</div>
-                    <div class="form-step-label">Contact Info</div>
-                </div>
-                <div class="form-steps-progress" style="width: 25%;"></div>
+            <div class="form-step" data-step="2">
+                <div class="form-step-number">2</div>
+                <div class="form-step-label">Vehicle Details</div>
             </div>
-            
-            <form id="voiceSellerFormData">
-                <!-- Tab 1: Basic Info -->
-                <div class="form-tab active" data-tab="1">
-                    ${createBasicInfoSection('voice')}
-                    <div class="form-navigation">
-                        <button type="button" class="btn btn-secondary" disabled>Previous</button>
-                        <button type="button" class="btn btn-primary" onclick="nextTab(1, 'voiceSeller')">Next</button>
-                    </div>
-                </div>
-                
-                <!-- Tab 2: Voice Details -->
-                <div class="form-tab" data-tab="2">
-                    ${createVoiceDetailsSection()}
-                    <div class="form-navigation">
-                        <button type="button" class="btn btn-secondary" onclick="prevTab(2, 'voiceSeller')">Previous</button>
-                        <button type="button" class="btn btn-primary" onclick="nextTab(2, 'voiceSeller')">Next</button>
-                    </div>
-                </div>
-                
-                <!-- Tab 3: Samples -->
-                <div class="form-tab" data-tab="3">
-                    ${createVoiceSamplesSection()}
-                    <div class="form-navigation">
-                        <button type="button" class="btn btn-secondary" onclick="prevTab(3, 'voiceSeller')">Previous</button>
-                        <button type="button" class="btn btn-primary" onclick="nextTab(3, 'voiceSeller')">Next</button>
-                    </div>
-                </div>
-                
-                <!-- Tab 4: Contact Info -->
-                <div class="form-tab" data-tab="4">
-                    ${createVoiceContactSection()}
-                    <div class="form-navigation">
-                        <button type="button" class="btn btn-secondary" onclick="prevTab(4, 'voiceSeller')">Previous</button>
-                        <button type="submit" class="btn btn-primary">Submit Listing</button>
-                    </div>
-                </div>
-            </form>
-            
-            <div class="form-footer">
-                <p>Your information is secure and will only be used for listing purposes.</p>
-                <p>Need help? Contact support@nysalister.com</p>
+            <div class="form-step" data-step="3">
+                <div class="form-step-number">3</div>
+                <div class="form-step-label">Service Details</div>
             </div>
-        `;
+            <div class="form-step" data-step="4">
+                <div class="form-step-number">4</div>
+                <div class="form-step-label">Documents</div>
+            </div>
+            <div class="form-steps-progress" style="width: 25%;"></div>
+        </div>
         
-        return form;
-    }
+        <form id="transportFormData">
+            <!-- Tab 1: Basic Info -->
+            <div class="form-tab active" data-tab="1">
+                ${createBasicInfoSection('transport')}
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" disabled>Previous</button>
+                    <button type="button" class="btn btn-primary" onclick="nextTab(1, 'transport')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Tab 2: Vehicle Details -->
+            <div class="form-tab" data-tab="2">
+                ${createTransportVehicleSection()}
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" onclick="prevTab(2, 'transport')">Previous</button>
+                    <button type="button" class="btn btn-primary" onclick="nextTab(2, 'transport')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Tab 3: Service Details -->
+            <div class="form-tab" data-tab="3">
+                ${createTransportServiceSection()}
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" onclick="prevTab(3, 'transport')">Previous</button>
+                    <button type="button" class="btn btn-primary" onclick="nextTab(3, 'transport')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Tab 4: Documents -->
+            <div class="form-tab" data-tab="4">
+                ${createTransportDocumentsSection()}
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" onclick="prevTab(4, 'transport')">Previous</button>
+                    <button type="submit" class="btn btn-primary">Submit Listing</button>
+                </div>
+            </div>
+        </form>
+        
+        <div class="form-footer">
+            <p>Your information is secure and will only be used for listing purposes.</p>
+            <p>Need help? Contact support@nysalister.com</p>
+        </div>
+    `;
+    
+    return form;
+}
 
-    // Helper functions to create form sections
-    function createBasicInfoSection(type) {
-        let specificFields = '';
-        
-        if (type === 'service') {
-            specificFields = `
-                <div class="form-group">
-                    <label class="form-label required">Service Category</label>
-                    <select class="form-control" name="serviceCategory" required>
-                        <option value="">Select a category</option>
-                        ${listingData.serviceCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
-                    </select>
-                </div>
-            `;
-        } else if (type === 'store') {
-            specificFields = `
-                <div class="form-group">
-                    <label class="form-label required">Store Category</label>
-                    <select class="form-control" name="storeCategory" required>
-                        <option value="">Select a category</option>
-                        ${listingData.storeCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
-                    </select>
-                </div>
-            `;
-        } else if (type === 'job') {
-            specificFields = `
-                <div class="form-group">
-                    <label class="form-label required">Job Category</label>
-                    <select class="form-control" name="jobCategory" required>
-                        <option value="">Select a category</option>
-                        ${listingData.jobCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
-                    </select>
-                </div>
-            `;
-        }
-        
-        return `
-            <div class="form-section">
-                <h3 class="form-section-title"><i class="fas fa-info-circle"></i> Basic Information</h3>
-                <div class="form-group">
-                    <label class="form-label required">${type === 'job' ? 'Job Title' : (type === 'public' ? 'Place Name' : (type === 'realEstate' ? 'Property Name' : 'Business Name'))}</label>
-                    <input type="text" class="form-control" name="name" placeholder="Enter ${type === 'job' ? 'job title' : (type === 'public' ? 'place name' : (type === 'realEstate' ? 'property name' : 'business name'))}" required>
-                </div>
-                ${specificFields}
-                <div class="form-group">
-                    <label class="form-label required">Description</label>
-                    <textarea class="form-control form-textarea" name="description" placeholder="Provide a detailed description" required></textarea>
-                </div>
+// Helper functions to create form sections for Transport
+function createBasicInfoSection(type) {
+    let specificFields = '';
+    
+    if (type === 'service') {
+        specificFields = `
+            <div class="form-group">
+                <label class="form-label required">Service Category</label>
+                <select class="form-control" name="serviceCategory" required>
+                    <option value="">Select a category</option>
+                    ${listingData.serviceCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
+                </select>
+            </div>
+        `;
+    } else if (type === 'store') {
+        specificFields = `
+            <div class="form-group">
+                <label class="form-label required">Store Category</label>
+                <select class="form-control" name="storeCategory" required>
+                    <option value="">Select a category</option>
+                    ${listingData.storeCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
+                </select>
+            </div>
+        `;
+    } else if (type === 'job') {
+        specificFields = `
+            <div class="form-group">
+                <label class="form-label required">Job Category</label>
+                <select class="form-control" name="jobCategory" required>
+                    <option value="">Select a category</option>
+                    ${listingData.jobCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
+                </select>
+            </div>
+        `;
+    } else if (type === 'transport') {
+        specificFields = `
+            <div class="form-group">
+                <label class="form-label required">Transport Category</label>
+                <select class="form-control" name="transportCategory" required>
+                    <option value="">Select a category</option>
+                    ${listingData.transportCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
+                </select>
             </div>
         `;
     }
+    
+    return `
+        <div class="form-section">
+            <h3 class="form-section-title"><i class="fas fa-info-circle"></i> Basic Information</h3>
+            <div class="form-group">
+                <label class="form-label required">${type === 'job' ? 'Job Title' : (type === 'public' ? 'Place Name' : (type === 'realEstate' ? 'Property Name' : 'Business Name'))}</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter ${type === 'job' ? 'job title' : (type === 'public' ? 'place name' : (type === 'realEstate' ? 'property name' : 'business name'))}" required>
+            </div>
+            ${specificFields}
+            <div class="form-group">
+                <label class="form-label required">Description</label>
+                <textarea class="form-control form-textarea" name="description" placeholder="Provide a detailed description" required></textarea>
+            </div>
+        </div>
+    `;
+}
 
     function createServiceDetailsSection() {
         return `
@@ -1907,59 +1921,77 @@ body > h1:first-of-type:not(.heading) {
         `;
     }
 
-    function createVoiceDetailsSection() {
-        return `
-            <div class="form-section">
-                <h3 class="form-section-title"><i class="fas fa-microphone-alt"></i> Voice Details</h3>
+    function createTransportVehicleSection() {
+    return `
+        <div class="form-section">
+            <h3 class="form-section-title"><i class="fas fa-car"></i> Vehicle Details</h3>
+            <div class="form-row">
                 <div class="form-group">
-                    <label class="form-label required">Voice Type</label>
-                    <div class="form-radio-group">
-                        <label class="form-radio">
-                            <input type="radio" name="voiceType" value="Male" required> Male
-                        </label>
-                        <label class="form-radio">
-                            <input type="radio" name="voiceType" value="Female"> Female
-                        </label>
-                        <label class="form-radio">
-                            <input type="radio" name="voiceType" value="Child"> Child
-                        </label>
-                    </div>
+                    <label class="form-label required">Vehicle Type</label>
+                    <select class="form-control" name="vehicleType" required>
+                        <option value="">Select type</option>
+                        <option value="E-Rickshaw">E-Rickshaw</option>
+                        <option value="Auto Rickshaw">Auto Rickshaw</option>
+                        <option value="Three Wheeler">Three Wheeler</option>
+                        <option value="Mini Truck">Mini Truck</option>
+                        <option value="Tempo">Tempo</option>
+                        <option value="Large Truck">Large Truck</option>
+                        <option value="Pickup Truck">Pickup Truck</option>
+                        <option value="Car">Car</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Van">Van</option>
+                        <option value="Bus">Bus</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label required">Voice Styles</label>
-                    <div class="form-checkbox-group">
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="voiceStyles" value="Commercial"> Commercial
-                        </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="voiceStyles" value="Narrative"> Narrative
-                        </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="voiceStyles" value="Character"> Character
-                        </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="voiceStyles" value="Announcer"> Announcer
-                        </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="voiceStyles" value="Conversational"> Conversational
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Languages</label>
-                    <textarea class="form-control form-textarea" name="languages" placeholder="List all languages you can voice in"></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Accents</label>
-                    <textarea class="form-control form-textarea" name="accents" placeholder="List all accents you can perform"></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Hourly Rate (₹)</label>
-                    <input type="number" class="form-control" name="hourlyRate" placeholder="e.g. 2000">
+                    <label class="form-label">Vehicle Make</label>
+                    <input type="text" class="form-control" name="vehicleMake" placeholder="e.g. Tata, Mahindra">
                 </div>
             </div>
-        `;
-    }
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Vehicle Model</label>
+                    <input type="text" class="form-control" name="vehicleModel" placeholder="e.g. Ace, Bolero">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Vehicle Year</label>
+                    <input type="number" class="form-control" name="vehicleYear" placeholder="e.g. 2018">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Vehicle Number</label>
+                    <input type="text" class="form-control" name="vehicleNumber" placeholder="e.g. DL01AB1234">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Capacity (kg)</label>
+                    <input type="number" class="form-control" name="capacity" placeholder="e.g. 1000">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Vehicle Features</label>
+                <div class="form-checkbox-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="vehicleFeatures" value="GPS Tracking"> GPS Tracking
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="vehicleFeatures" value="Cooling System"> Cooling System
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="vehicleFeatures" value="Hydraulic Lift"> Hydraulic Lift
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="vehicleFeatures" value="Insurance"> Insurance
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="vehicleFeatures" value="Good Condition"> Good Condition
+                    </label>
+                </div>
+            </div>
+        </div>
+    `;
+}
 
     function createLocationSection(type) {
         let specificFields = '';
@@ -2379,129 +2411,139 @@ body > h1:first-of-type:not(.heading) {
         `;
     }
 
-    function createVoiceSamplesSection() {
-        return `
-            <div class="form-section">
-                <h3 class="form-section-title"><i class="fas fa-headphones"></i> Voice Samples</h3>
-                <div class="form-group">
-                    <label class="form-label required">Commercial Sample</label>
-                    <div class="file-upload">
-                        <input type="file" class="file-upload-input" id="commercialSample" accept=".mp3,.wav,.ogg" required>
-                        <label for="commercialSample" class="file-upload-label">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <div class="file-upload-text">Upload Commercial Sample</div>
-                            <div class="file-upload-hint">MP3, WAV, OGG (Max 10MB)</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Narration Sample</label>
-                    <div class="file-upload">
-                        <input type="file" class="file-upload-input" id="narrationSample" accept=".mp3,.wav,.ogg">
-                        <label for="narrationSample" class="file-upload-label">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <div class="file-upload-text">Upload Narration Sample</div>
-                            <div class="file-upload-hint">MP3, WAV, OGG (Max 10MB)</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Character Sample</label>
-                    <div class="file-upload">
-                        <input type="file" class="file-upload-input" id="characterSample" accept=".mp3,.wav,.ogg">
-                        <label for="characterSample" class="file-upload-label">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <div class="file-upload-text">Upload Character Sample</div>
-                            <div class="file-upload-hint">MP3, WAV, OGG (Max 10MB)</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Other Sample</label>
-                    <div class="file-upload">
-                        <input type="file" class="file-upload-input" id="otherSample" accept=".mp3,.wav,.ogg">
-                        <label for="otherSample" class="file-upload-label">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <div class="file-upload-text">Upload Other Sample</div>
-                            <div class="file-upload-hint">MP3, WAV, OGG (Max 10MB)</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Demo Reel Link (if available)</label>
-                    <input type="url" class="form-control" name="demoReelLink" placeholder="e.g. https://soundcloud.com/yourdemo">
+    function createTransportServiceSection() {
+    return `
+        <div class="form-section">
+            <h3 class="form-section-title"><i class="fas fa-route"></i> Service Details</h3>
+            <div class="form-group">
+                <label class="form-label required">Service Type</label>
+                <div class="form-checkbox-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="serviceType" value="Local Transport"> Local Transport
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="serviceType" value="Intercity Transport"> Intercity Transport
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="serviceType" value="Goods Delivery"> Goods Delivery
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="serviceType" value="Rental Service"> Rental Service
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="serviceType" value="Parcel Delivery"> Parcel Delivery
+                    </label>
                 </div>
             </div>
-        `;
-    }
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Base Rate (₹)</label>
+                    <input type="number" class="form-control" name="baseRate" placeholder="e.g. 500">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Rate Per Km (₹)</label>
+                    <input type="number" class="form-control" name="ratePerKm" placeholder="e.g. 10">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Service Area (km radius)</label>
+                    <input type="number" class="form-control" name="serviceRadius" placeholder="e.g. 50">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Minimum Charge (₹)</label>
+                    <input type="number" class="form-control" name="minCharge" placeholder="e.g. 200">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Service Description</label>
+                <textarea class="form-control form-textarea" name="serviceDescription" placeholder="Describe your transport services in detail"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Availability</label>
+                <div class="form-checkbox-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="availability" value="24/7"> 24/7
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="availability" value="Weekdays"> Weekdays
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="availability" value="Weekends"> Weekends
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="availability" value="On Demand"> On Demand
+                    </label>
+                </div>
+            </div>
+        </div>
+        ${createLocationSection('transport')}
+    `;
+}
 
-    function createVoiceContactSection() {
-        return `
-            <div class="form-section">
-                <h3 class="form-section-title"><i class="fas fa-id-card"></i> Contact Information</h3>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label required">Contact Name</label>
-                        <input type="text" class="form-control" name="contactName" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label required">Contact Number</label>
-                        <input type="tel" class="form-control" name="contactNumber" placeholder="10-digit mobile number" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label">Alternate Number</label>
-                        <input type="tel" class="form-control" name="alternateNumber" placeholder="Alternate contact number">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label required">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Your email address" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Website (if any)</label>
-                    <input type="url" class="form-control" name="website" placeholder="e.g. https://yourwebsite.com">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Social Media Links</label>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="url" class="form-control" name="facebook" placeholder="Facebook URL">
-                        </div>
-                        <div class="form-group">
-                            <input type="url" class="form-control" name="instagram" placeholder="Instagram URL">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="url" class="form-control" name="youtube" placeholder="YouTube URL">
-                        </div>
-                        <div class="form-group">
-                            <input type="url" class="form-control" name="linkedin" placeholder="LinkedIn URL">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Availability</label>
-                    <div class="form-checkbox-group">
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="availability" value="Weekdays"> Weekdays
-                        </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="availability" value="Weekends"> Weekends
-                        </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="availability" value="Evenings"> Evenings
-                        </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="availability" value="Flexible"> Flexible
-                        </label>
-                    </div>
-                </div>
+    function createTransportDocumentsSection() {
+    return `
+        <div class="form-section">
+            <h3 class="form-section-title"><i class="fas fa-file-alt"></i> Documents & Verification</h3>
+            <div class="form-group">
+                <label class="form-label required">Driver License Number</label>
+                <input type="text" class="form-control" name="licenseNumber" placeholder="Driver's license number" required>
             </div>
-        `;
-    }
+            <div class="form-group">
+                <label class="form-label required">License Expiry Date</label>
+                <input type="date" class="form-control" name="licenseExpiry" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label required">RC Book Copy</label>
+                <div class="file-upload">
+                    <input type="file" class="file-upload-input" id="rcBookCopy" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <label for="rcBookCopy" class="file-upload-label">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div class="file-upload-text">Upload RC Book Copy</div>
+                        <div class="file-upload-hint">PDF, JPG, PNG (Max 5MB)</div>
+                    </label>
+                </div>
+                <div class="file-preview" id="rcBookCopyPreview"></div>
+            </div>
+            <div class="form-group">
+                <label class="form-label required">Insurance Copy</label>
+                <div class="file-upload">
+                    <input type="file" class="file-upload-input" id="insuranceCopy" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <label for="insuranceCopy" class="file-upload-label">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div class="file-upload-text">Upload Insurance Copy</div>
+                        <div class="file-upload-hint">PDF, JPG, PNG (Max 5MB)</div>
+                    </label>
+                </div>
+                <div class="file-preview" id="insuranceCopyPreview"></div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Vehicle Photos (Front, Back, Side)</label>
+                <div class="file-upload">
+                    <input type="file" class="file-upload-input" id="vehiclePhotos" accept=".jpg,.jpeg,.png" multiple>
+                    <label for="vehiclePhotos" class="file-upload-label">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div class="file-upload-text">Upload Vehicle Photos</div>
+                        <div class="file-upload-hint">JPG, PNG (Max 5MB each)</div>
+                    </label>
+                </div>
+                <div class="file-preview" id="vehiclePhotosPreview"></div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Other Documents (if any)</label>
+                <div class="file-upload">
+                    <input type="file" class="file-upload-input" id="otherTransportDocs" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                    <label for="otherTransportDocs" class="file-upload-label">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div class="file-upload-text">Upload Other Documents</div>
+                        <div class="file-upload-hint">PDF, JPG, PNG (Max 5MB each)</div>
+                    </label>
+                </div>
+                <div class="file-preview" id="otherTransportDocsPreview"></div>
+            </div>
+        </div>
+    `;
+}
 
     // Form navigation functions
     function showForm(formId) {
